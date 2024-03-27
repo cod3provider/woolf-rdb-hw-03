@@ -1,0 +1,34 @@
+﻿1. 
+select * From mydb-products;
+
+
+1-1.
+select name, phone from mydb-shippers;
+
+
+2.
+select avg (price) as avg_price,
+min(price) as min_price,
+max(price) as max_price 
+from mydb-products;
+
+
+3.
+select distinct category_id, price 
+from mydb-products 
+order by price desc 
+limit 10;
+
+
+4.
+select count (*) 
+from mydb.products 
+where price › 20 and price ‹ 100;
+
+
+5.
+select supplier_id, 
+count(*) as row_quantity, 
+avg (price) as price_avg 
+from mydb-products 
+group by supplier_id;
